@@ -39,6 +39,8 @@ CREATE TABLE `infos_ehpad` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ````
 
-
+### Les fichiers GEOJSON
+https://mon-chatbot.com/aproxi/dep.json et https://mon-chatbot.com/aproxi/geojson_avec_prix_moyens.json <br />
+Ils sont volumineux, je vous laisse les télécharger via ces 2 URLS et les placer dans le même dossier contenant index.html et les autres fichiers.
 
 
