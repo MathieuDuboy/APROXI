@@ -56,3 +56,11 @@ if (val <= 300) { return {fillColor: "#25798E", fillOpacity: 0.8, weight: 2,colo
 if (val <= 350) { return {fillColor: "#1D5E6F", fillOpacity: 0.8, weight: 2,color: "#1D5E6F",opacity: 1 };}
 else { return {weight: 2,color: "#66B0C3",opacity: 1,fillColor: "#fff",fillOpacity: 0.8 }; }
 ````
+
+### Modifier l'action sur le clic d'un département
+Vous devez modifier l'URL du site vers lequel vous souhaitez envoyer vos utilisateurs en modifiant cette ligne dans index.html : 
+
+````
+window.location = 'http://www.monsite_a_changer_ici.fr/id_departement='+feature.properties.code;
+
+````
