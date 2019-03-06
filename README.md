@@ -44,7 +44,7 @@ https://mon-chatbot.com/aproxi/dep.json et https://mon-chatbot.com/aproxi/geojso
 Ils sont volumineux, je vous laisse les télécharger via ces 2 URLS et les placer dans le même dossier contenant index.html et les autres fichiers.
 
 ### Modifier les couleurs de la carte 
-Selon les prix moyens, vous pouvez modifier les couleurs des départements en modifiant dans index.html cette partie du code : 
+Selon les prix moyens, vous pouvez modifier les couleurs des départements en modifiant dans index.html cette partie du code : (ici les prix varient de 0 à 350 ... à vous de voir si cela devait changer, rajoutez des conditions).
 
 ````
 if (val <= 50) { return {fillColor: "#66B0C3", fillOpacity: 0.8, weight: 2,color: "#66B0C3",opacity: 1 }; } else
