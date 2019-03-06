@@ -45,6 +45,7 @@ Ils sont volumineux, je vous laisse les télécharger via ces 2 URLS et les plac
 
 ### Modifier les couleurs de la carte 
 Selon les prix moyens, vous pouvez modifier les couleurs des départements en modifiant dans index.html cette partie du code : 
+
 ````
 if (val <= 50) { return {fillColor: "#66B0C3", fillOpacity: 0.8, weight: 2,color: "#66B0C3",opacity: 1 }; } else
 	                if (val <= 100) { return {fillColor: "#53A6BB", fillOpacity: 0.8, weight: 2,color: "#53A6BB",opacity: 1 }; } else
@@ -54,4 +55,4 @@ if (val <= 50) { return {fillColor: "#66B0C3", fillOpacity: 0.8, weight: 2,color
 	                if (val <= 300) { return {fillColor: "#25798E", fillOpacity: 0.8, weight: 2,color: "#25798E",opacity: 1 };} else
 	                if (val <= 350) { return {fillColor: "#1D5E6F", fillOpacity: 0.8, weight: 2,color: "#1D5E6F",opacity: 1 };}
 	                else { return {weight: 2,color: "#66B0C3",opacity: 1,fillColor: "#fff",fillOpacity: 0.8 }; }
-                    ````
+````
