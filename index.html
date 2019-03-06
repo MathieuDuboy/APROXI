@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Test Map Leaflet / HEPAD</title>
+	<meta content="Test Map Leaflet / HEPAD" name="description">
+	<meta content="Mathieu DUBOY" name="author">
+	<link href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" rel="stylesheet">
+	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+</head>
+<body>
+	<div class="map" id="map" style="width:550px;height: 550px"></div>
+	<script>
+	   // Centrer la carte sur le massif central
+	      var map = L.map('map').setView([47.221996, 2.067849], 6);
+	    // Ajouter la première couche
+	      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+	              maxZoom: 6,
+	              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap<\/a>, ' +
+	                  'Imagery © <a href="https://www.mapbox.com/">Mapbox<\/a>',
+	              id: 'mapbox.light'
+	          }).addTo(map);
+
+	    // Ajouter les limites des départements
+	      $.getJSON('geojson_avec_prix_moyens.json', function (data) {
+	          L.geoJSON(data, {
+	              style: function(feature) {
+	                var val = parseInt(feature.properties.prix_moyen);
+	              // Faire varier les couleurs selon le prix moyen des hébergements
+	                if (val <= 50) { return {fillColor: "#66B0C3", fillOpacity: 0.8, weight: 2,color: "#66B0C3",opacity: 1 }; } else
+	                if (val <= 100) { return {fillColor: "#53A6BB", fillOpacity: 0.8, weight: 2,color: "#53A6BB",opacity: 1 }; } else
+	                if (val <= 150) { return {fillColor: "#409CB4", fillOpacity: 0.8, weight: 2,color: "#409CB4",opacity: 1 };} else
+	                if (val <= 200) { return {fillColor: "#2D93AD", fillOpacity: 0.8, weight: 2,color: "#2D93AD",opacity: 1 };} else
+	                if (val <= 250) { return {fillColor: "#29869E", fillOpacity: 0.8, weight: 2,color: "#29869E",opacity: 1 };} else
+	                if (val <= 300) { return {fillColor: "#25798E", fillOpacity: 0.8, weight: 2,color: "#25798E",opacity: 1 };} else
+	                if (val <= 350) { return {fillColor: "#1D5E6F", fillOpacity: 0.8, weight: 2,color: "#1D5E6F",opacity: 1 };}
+	                else { return {weight: 2,color: "#66B0C3",opacity: 1,fillColor: "#fff",fillOpacity: 0.8 }; }
+	              },
+	              onEachFeature: function (feature, layer) {
+	                layer.on('click', function () {
+	                // Ajouter un évènement au clic sur un département et renvoyer dans l'URL une variable "id_departement"
+	                  window.location = 'http://www.monsite_a_changer_ici.fr/id_departement='+feature.properties.code;
+	                });
+	              }
+	          }).addTo(map);
+	      });
+
+
+	</script>
+</body>
+</html>
