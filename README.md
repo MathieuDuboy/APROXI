@@ -48,11 +48,11 @@ Selon les prix moyens, vous pouvez modifier les couleurs des départements en mo
 
 ````
 if (val <= 50) { return {fillColor: "#66B0C3", fillOpacity: 0.8, weight: 2,color: "#66B0C3",opacity: 1 }; } else
-	                if (val <= 100) { return {fillColor: "#53A6BB", fillOpacity: 0.8, weight: 2,color: "#53A6BB",opacity: 1 }; } else
-	                if (val <= 150) { return {fillColor: "#409CB4", fillOpacity: 0.8, weight: 2,color: "#409CB4",opacity: 1 };} else
-	                if (val <= 200) { return {fillColor: "#2D93AD", fillOpacity: 0.8, weight: 2,color: "#2D93AD",opacity: 1 };} else
-	                if (val <= 250) { return {fillColor: "#29869E", fillOpacity: 0.8, weight: 2,color: "#29869E",opacity: 1 };} else
-	                if (val <= 300) { return {fillColor: "#25798E", fillOpacity: 0.8, weight: 2,color: "#25798E",opacity: 1 };} else
-	                if (val <= 350) { return {fillColor: "#1D5E6F", fillOpacity: 0.8, weight: 2,color: "#1D5E6F",opacity: 1 };}
-	                else { return {weight: 2,color: "#66B0C3",opacity: 1,fillColor: "#fff",fillOpacity: 0.8 }; }
+if (val <= 100) { return {fillColor: "#53A6BB", fillOpacity: 0.8, weight: 2,color: "#53A6BB",opacity: 1 }; } else
+if (val <= 150) { return {fillColor: "#409CB4", fillOpacity: 0.8, weight: 2,color: "#409CB4",opacity: 1 };} else
+if (val <= 200) { return {fillColor: "#2D93AD", fillOpacity: 0.8, weight: 2,color: "#2D93AD",opacity: 1 };} else
+if (val <= 250) { return {fillColor: "#29869E", fillOpacity: 0.8, weight: 2,color: "#29869E",opacity: 1 };} else
+if (val <= 300) { return {fillColor: "#25798E", fillOpacity: 0.8, weight: 2,color: "#25798E",opacity: 1 };} else
+if (val <= 350) { return {fillColor: "#1D5E6F", fillOpacity: 0.8, weight: 2,color: "#1D5E6F",opacity: 1 };}
+else { return {weight: 2,color: "#66B0C3",opacity: 1,fillColor: "#fff",fillOpacity: 0.8 }; }
 ````
